@@ -20,6 +20,9 @@ public class SQLActivity extends ListActivity {
     @BindView(R.id.get_toWrite)
     EditText mEditText;
 
+    @BindView(R.id.get_toWrite2)
+    EditText mEditText2;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,8 +52,9 @@ public class SQLActivity extends ListActivity {
 
 
                 // save the new comment to the database
-                nt = datasource.createComment(mEditText.getText().toString());
+                nt = datasource.createComment(mEditText.getText().toString(), mEditText2.getText().toString());
                 adapter.add(nt);
+
                 break;
             case R.id.delete:
                 if (getListAdapter().getCount() > 0) {

@@ -7,7 +7,14 @@
     <EditText
         android:id="@+id/get_toWrite"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:hint="Comment"/>
+
+    <EditText
+        android:id="@+id/get_toWrite2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date"/>
 
     <LinearLayout
         android:id="@+id/group"
